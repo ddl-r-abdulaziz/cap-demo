@@ -1,0 +1,18 @@
+[submodule "root"]
+	path = root
+	url = https://github.com/ddl-r-abdulaziz/root.git
+[submodule "sib-a"]
+	path = sib-a
+	url = https://github.com/ddl-r-abdulaziz/sib-a.git
+[submodule "sib-b"]
+	path = sib-b
+	url = https://github.com/ddl-r-abdulaziz/sib-b.git
+[submodule "leaf-root"]
+	path = leaf-root
+	url = https://github.com/ddl-r-abdulaziz/leaf-root.git
+[submodule "leaf-three"]
+	path = leaf-three
+	url = https://github.com/ddl-r-abdulaziz/leaf-three.git
+[submodule "leaf-diamond"]
+	path = leaf-diamond
+	url = https://github.com/ddl-r-abdulaziz/leaf-diamond.git
