@@ -32,4 +32,4 @@ bundle: ## Bundle every bundle, in dependency order (root, then sib-a/sib-b, the
 
 .PHONY: clean
 clean: ## Clean build artifacts in every bundle
-	@for b in $(BUNDLES); do $(MAKE) -C $$b clean; done
+	@for b in $(BUNDLES); do $(MAKE) -C $$b clean BUNDLE_BINARY_SRC=$(BUNDLE_BINARY_SRC); done
