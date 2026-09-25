@@ -1,0 +1,8 @@
+name: cap-demo
+greeting: hello from root
+tags:
+- root
+- sib-b
+- leaf-three
+sib: b
+leaf: three

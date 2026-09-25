@@ -1,0 +1,4 @@
+name: cap-demo
+greeting: hello from root
+tags:
+- root

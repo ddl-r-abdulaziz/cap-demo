@@ -28,6 +28,19 @@ bundle: ## Bundle every bundle, in dependency order (root, then sib-a/sib-b, the
 configure: ## Configure every bundle, in dependency order (root, then sib-a/sib-b, then leaves)
 	@for b in $(BUNDLES); do $(MAKE) -C $$b configure; done
 
+##@ Test
+
+.PHONY: test
+test: configure ## Run configure for every bundle, then diff each config.yaml against test/golden
+	@status=0; \
+	for b in $(BUNDLES); do \
+		if ! diff -u "test/golden/$$b.config.yaml" "$$b/config.yaml"; then \
+			echo "$$b/config.yaml does not match test/golden/$$b.config.yaml" >&2; \
+			status=1; \
+		fi; \
+	done; \
+	exit $$status
+
 ##@ Housekeeping
 
 .PHONY: clean

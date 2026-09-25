@@ -1,0 +1,9 @@
+name: cap-demo
+greeting: hello from leaf-diamond
+tags:
+- root
+- sib-a
+- sib-b
+- leaf-diamond
+sib: b
+leaf: diamond

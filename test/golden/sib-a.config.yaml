@@ -1,0 +1,6 @@
+name: cap-demo
+greeting: hello from root
+tags:
+- root
+- sib-a
+sib: a
