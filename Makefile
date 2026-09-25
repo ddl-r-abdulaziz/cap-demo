@@ -22,6 +22,12 @@ deps: ## Install build tooling for every bundle, in dependency order (root, then
 bundle: ## Bundle every bundle, in dependency order (root, then sib-a/sib-b, then leaves)
 	@for b in $(BUNDLES); do $(MAKE) -C $$b bundle; done
 
+##@ Configure
+
+.PHONY: configure
+configure: ## Configure every bundle, in dependency order (root, then sib-a/sib-b, then leaves)
+	@for b in $(BUNDLES); do $(MAKE) -C $$b configure; done
+
 ##@ Housekeeping
 
 .PHONY: clean
